@@ -2,7 +2,7 @@
 
 Cat::Cat(){}
 
-Cat::Cat(string Name, string Dna, string Sex, string Color) :Pet(Name,Dna,Sex), color(Color){}
+Cat::Cat(string Name, string Dna, string Sex, string Color) :Pet(Name,Dna = "Cat",Sex), color(Color){}
 
 void Cat::Perform(string cdm, ostream& fout)
 {
@@ -20,22 +20,22 @@ string Cat::MyColorIs()
 	return color;
 }
 
-void Cat::Extract(ifstream&) throw (AppError)
+void Cat::Extract(ifstream& fin) throw (AppError)
 {
 	//
 }
 
-void Cat::Insert(ostream&)
+void Cat::Insert(ostream& fout)
 {
 	//
 }
 	
-void Cat::Get(ifstream&) throw (AppError)
+void Cat::Get(ifstream& fin) throw (AppError)
 {
 	//	
 }
 
-void Cat::Put(ostream&)
+void Cat::Put(ostream& fout)
 {
 	//
 }

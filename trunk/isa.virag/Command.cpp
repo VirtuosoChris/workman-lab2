@@ -33,11 +33,11 @@ ostream& operator<<( ostream& fout, Command& Obj)
      return fout;
 }
 
-void Command::Get (ifstream&) throw (TokenError)
+void Command::Get (ifstream& fin) throw (TokenError)
 {
 	//
 }
-void Command::Put (ostream&)
+void Command::Put (ostream& fout)
 {
 	//
 }

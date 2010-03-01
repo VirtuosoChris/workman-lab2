@@ -20,8 +20,8 @@ class Command
         friend  ostream& operator<<( ostream& fout, Command& obj);
         
     protected:
-		void Get (ifstream&) throw (TokenError);
-		void Put (ostream&);
+		void Get (ifstream& fin) throw (TokenError);
+		void Put (ostream& fout);
 	
 };
 #endif

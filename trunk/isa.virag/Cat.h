@@ -11,10 +11,10 @@ class Cat : public Pet
 		string MyColorIs();
 		string Cry();
 		void Extract(ifstream& fin) throw (AppError);
-		void Insert(ostream&);
+		void Insert(ostream& fout);
 	protected:
-		void Get (ifstream&) throw (AppError);
-		void Put (ostream&);
+		void Get (ifstream& fin) throw (AppError);
+		void Put (ostream& fout);
 		
 	private:
 		string color;

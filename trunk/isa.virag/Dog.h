@@ -12,10 +12,10 @@ class Dog : public Pet
 		string Bark();
 		Dog mate(Dog dog);
 		void Extract(ifstream& fin) throw (TokenError);
-		void Insert(ostream&);
+		void Insert(ostream& fout);
 	protected:
-		void Get (ifstream&);
-		void Put (ostream&);
+		void Get (ifstream& fout);
+		void Put (ostream& fout);
 			
 };
 #endif

@@ -5,7 +5,7 @@ Dog::Dog()
 	//
 }
 
-Dog::Dog(string Name, string Dna, string Sex) :Pet(Name,Dna,Sex){}
+Dog::Dog(string Name, string Dna, string Sex) :Pet(Name,Dna = "dog",Sex){}
 
 void Dog::Perform(string cdm, ostream& fout) throw (AppError)
 {
@@ -34,22 +34,22 @@ Dog Dog::mate(Dog dog)
 	//	
 }
 
-void Dog::Extract(ifstream&) throw (TokenError)
+void Dog::Extract(ifstream& fin) throw (TokenError)
 {
 	//
 }
 
-void Dog::Insert(ostream&)
+void Dog::Insert(ostream& fout)
 {
 	//
 }
 	
-void Dog::Get(ifstream&)
+void Dog::Get(ifstream& fout)
 {
 	//	
 }
 
-void Dog::Put(ostream&)
+void Dog::Put(ostream& fout)
 {
 	//
 }

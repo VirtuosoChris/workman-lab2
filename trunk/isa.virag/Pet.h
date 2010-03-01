@@ -18,8 +18,8 @@ class Pet
 		string MyNameIs() const { return name; };
 		string MySpeciesIs() const { return dna; };
 		string MySexIs() const { return sex; };
-		void Extract (ifstream&) throw (TokenError);
-		void Insert (ostream&);
+		void Extract (ifstream& fin) throw (TokenError);
+		void Insert (ostream& fout);
 		friend  ifstream& operator>>( ifstream& fin, Pet& obj) throw(TokenError);
         friend  ostream& operator<<( ostream& fout, Pet& obj);
         
@@ -28,8 +28,8 @@ class Pet
 		string sex;
         
 	protected:
-		void Get (ifstream&) throw (TokenError);
-		void Put (ostream&);
+		void Get (ifstream& fin) throw (TokenError);
+		void Put (ostream& fout);
 		
 		
 	
