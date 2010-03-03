@@ -2,24 +2,20 @@
 
 const string AppError::NOERROR = "";
 
-AppError::AppError()
-{
+AppError::AppError(){
      msg = origin = NOERROR;
 }//default constructor
 
-AppError::AppError(string Why, string Where)
-{
+AppError::AppError(string Why, string Where){
      msg    = Why;
      origin = Where;
 }// constructor
 
-void AppError::appendMsg(string Msg)
-{
+void AppError::appendMsg(string Msg){
      msg = msg + ":" + Msg;
 }//appendMsg
 
 
-void AppError::appendOrg(string Org)
-{
+void AppError::appendOrg(string Org){
      origin = origin + ":" + Org;
 }//appendOrg

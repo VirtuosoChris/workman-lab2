@@ -7,8 +7,7 @@ using namespace std;
 using namespace IOMgmt;
 
 
-namespace IOMgmt 
-{
+namespace IOMgmt {
     const string IOError::IOERROR = "IOError{}";
     const string TokenError::TOKENERROR = "TokenError{}";
     const string Tokenizer::DELIMS =       " \t\n";      //Blank,Tab,Newline

@@ -1,0 +1,8 @@
+Command{ action: name?  pet1:    Pet{  name:  Thing  dna:  pet  sex: female }Pet   }Command
+Command{ action: speak!  pet1:    Dog{ name:  Fido    dna: dog   sex:  male }Dog  }Command
+Command{  pet1: Dog{ name:  Fido   dna: dog   sex:  male }Dog   action: mate!
+                     pet2:  Dog{ name:  Suade   dna: dog  sex: male }Dog
+}Command
+
+Command{ action: color?  pet1: Cat{ name:  Calvin  dna: cat  sex: male  color: white }Cat  }Command
+END

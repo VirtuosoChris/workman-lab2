@@ -10,45 +10,44 @@ using namespace std;
 #include "AppError.h"
 #define   MARGINSIZE   20
 
-namespace IOMgmt 
-{
+namespace IOMgmt {
 
 	class IOError: public AppError 
 	{
 		public:
-		  IOError();               //default constructor
+		  IOError();                       //default constructor
 		  IOError(string Msg);             //constructor
 		  IOError(string Msg, string Org); //constructor
-          //INHERITED: 
+            //INHERITED: 
             //string getMsg();
             //string getOrigin();
             //void   appendMsg(string Msg);
             //void   appendOrg(string Org);
 		
 		private:
-			static const string IOERROR;
+		  static const string IOERROR;
 	}; //IOError
 
 	
 	class TokenError: public AppError 
 	{
 		public:
-		  TokenError();               //default constructor
+		  TokenError();               	      //default constructor
 		  TokenError(string Msg);             //constructor
 		  TokenError(string Msg, string Org); //constructor
-          //INHERITED: 
+            //INHERITED: 
             //string getMsg();
             //string getOrigin();
             //void   appendMsg(string Msg);
             //void   appendOrg(string Org);
 		
 		private:
-			static const string TOKENERROR;
+		  static const string TOKENERROR;
 	}; //TokenError
 
 	bool  IsIn(char x, string s);	//Does (x) occur in (s)?
-    bool  Allwsp(string s);			//Is (s) all whitespace?
-	bool  IsWSP (char ch );			//Is (ch) whitespace?
+        bool  Allwsp(string s);		//Is (s) all whitespace?
+	bool  IsWSP (char ch );		//Is (ch) whitespace?
 
 	class  InMgr  
 	{
@@ -56,8 +55,7 @@ namespace IOMgmt
 		   InMgr( string Prompt )		throw( IOError );
 		   string    getFileName() const;
 		   ifstream& getStream()		throw( IOError );
-		   void		 close()			throw( IOError );
-
+		   void	     close()			throw( IOError );
 		   void      setFilePos()		throw( IOError );
 		   void      resetFilePos()		throw( IOError );
 
@@ -74,15 +72,15 @@ namespace IOMgmt
 		   OutMgr( string Prompt )			throw( IOError );
  		   string    getFileName() const;
 		   ostream&  getStream() 			throw( IOError );
-		   void		 close()				throw( IOError );
+		   void		 close()			throw( IOError );
 
 		   void    pushMargin()				throw( IOError ); //push cur
 		   void    popMargin()				throw( IOError ); //pop cur
 		   void    newLine()				throw( IOError );
-		   void    deltaMargin(int delta)	throw( IOError );
+		   void    deltaMargin(int delta)	  	throw( IOError );
 
 		   void    toMargin()				throw( IOError );
-		   void    pushToMargin(int delta)	throw( IOError );
+		   void    pushToMargin(int delta)		throw( IOError );
 		   void    popToMargin()			throw( IOError );
 		   void    advToMargin()			throw( IOError );
 		   void    pushAdvMargin()			throw( IOError );

@@ -1,14 +1,31 @@
-/* 
- * File:   Cat.h
- * Author: gealyneil
- *
- * Created on February 25, 2010, 3:40 PM
- */
+#ifndef _CAT
+#define _CAT
 
-#ifndef _CAT_H
-#define	_CAT_H
+#include "IOMgmt.h"
+#include "Pet.h"
 
+using namespace IOMgmt;
 
+class Cat : public Pet {
+      public:
+              Cat();													//Default constructor
+              Cat(string name, string dna, string sex, string color);   //Parametric constructor
+			  string MyColorIs();
+			  string Cry();
+			  bool IsCommandColor(string command);
+			  bool IsCommandSpeak(string command);
+			  virtual void Perform(string cmd, ostream& fout) throw(AppError);
+              virtual void Extract(ifstream& fin ) throw(TokenError);	//Boundary input
+              virtual void Insert( ostream& fout );						//Boundary output
+		friend ifstream& operator>>(ifstream& fin, Cat& obj) throw(TokenError);
+		friend ostream&  operator<<(ostream& fout, Cat& obj);
 
-#endif	/* _CAT_H */
+      protected:
+              virtual void  Get( ifstream& fin) throw(TokenError);	//Boundary input
+              virtual void  Put( ostream& fout);					//Boundary output
 
+	  private:
+			  string color;
+};//Cat
+
+#endif
