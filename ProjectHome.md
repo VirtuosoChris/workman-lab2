@@ -1,0 +1,1 @@
+Lab project; data serialization in C++, inheritance, etc.
